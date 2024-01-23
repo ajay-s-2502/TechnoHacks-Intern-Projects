@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay's Calc</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="calculator">
+        <div>
+            <input id="display" readonly>
+        </div>
+        <div id="buttons">
+            <button id="clear" onclick="allClear()">AC</button>
+            <button id="clear" onclick="del()">DE</button>
+            <button id="ops" onclick="appendVal('%')">%</button>
+            <button id="ops" onclick="appendVal('/')">/</button>
+            <button onclick="appendVal('7')">7</button>
+            <button onclick="appendVal('8')">8</button>
+            <button onclick="appendVal('9')">9</button>
+            <button id="ops" onclick="appendVal('*')">*</button>
+            <button onclick="appendVal('4')">4</button>
+            <button onclick="appendVal('5')">5</button>
+            <button onclick="appendVal('6')">6</button>
+            <button id="ops" onclick="appendVal('-')">-</button>
+            <button onclick="appendVal('1')">1</button>
+            <button onclick="appendVal('2')">2</button>
+            <button onclick="appendVal('3')">3</button>
+            <button id="ops" onclick="appendVal('+')">+</button>
+            <button onclick="appendVal('0')">0</button>
+            <button onclick="appendVal('.')">.</button>
+            <button id="equal" onclick="equal()">=</button>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>
