@@ -12,6 +12,7 @@ const timerBegin = () =>{
     document.getElementById("pause").removeAttribute("disabled", "");
     document.getElementById("start").setAttribute("disabled", "");
     document.getElementById("restart").setAttribute("disabled", "");
+    counter.setAttribute("readonly", "");
 }
 
 const pauseBtn = document.getElementById("pause");
@@ -29,7 +30,7 @@ const pause = () => {
         begin = setInterval("decrement()", 1000);
         document.getElementById("restart").setAttribute("disabled", "");
         pauseBtn.textContent = "Pause";
-        info.textContent = "👆👆👆Seconds Remaining...";
+        info.textContent = "👆👆👆 Seconds Remaining...";
     }
 }
 
@@ -40,7 +41,8 @@ const decrement = () => {
         document.getElementById("pause").setAttribute("disabled", "");
         document.getElementById("restart").removeAttribute("disabled", "");
         document.getElementById("start").removeAttribute("disabled", "");
-        info.textContent = "Time Over!!! --> Enter Seconds to Start";
+        info.textContent = "Time Over!!!";
+        counter.removeAttribute("readonly", "");
     }
     else
     {
@@ -52,6 +54,7 @@ const decrement = () => {
 const restart = () => {
     counter.value = temp;
     pauseBtn.textContent = "Pause";
+    info.textContent = "Press Start To Begin..."
     document.getElementById("restart").setAttribute("disabled", "");
     document.getElementById("pause").setAttribute("disabled", "");
     document.getElementById("start").removeAttribute("disabled", "");
